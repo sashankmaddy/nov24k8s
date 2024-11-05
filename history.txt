@@ -1,0 +1,117 @@
+ mkdir myapp
+  298  cd myapp/
+  299  ls
+  300  kubectl run mypod --image nginx --port 80 --dry-run=client -o yaml > pod.yaml
+  301  vi pod.yaml
+  302  kubectl get pods
+  303  kubectl create -f pod.yaml
+  304  kubectl get pods -o wide
+  305  kubectl expose pod mypod --type NodePort --port 80 --dry-run=client -o yaml
+  306  kubectl expose pod mypod --type NodePort --port 80 --dry-run=client -o yaml > service.yaml
+  307  vi service.yaml
+  308  vi pod.yaml
+  309  vi service.yaml
+  310  vi pod.yaml
+  311  vi service.yaml
+  312  kubectl create -f service.yaml
+  313  kubectl get service
+  314  kubectl get pod -o wide
+  315  vi pod.yaml
+  316  vi service.yaml
+  317  vi pod.yaml
+  318  vi service.yaml
+  319  vi pod.yaml
+  320  vi service.yaml
+  321  kubectl get nodes -o wide
+  322  kubectl get pod -n kube-system -o wide
+  323  kubectl delete -f service.yaml
+  324  vi service.yaml
+  325  kubectl create -f service.yaml
+  326  kubectl get service
+  327  kubectl get pod --show-labels
+  328  kubectl describe po mypod
+  329  kubectl get service
+  330  kubectl describe svc mypod-svc
+  331  kubectl delete -f service.yaml
+  332  vi service.yaml
+  333  kubectl create -f service.yaml
+  334  kubectl describe svc mypod-svc
+  335  kubectl get pod -o wide
+  336  kubectl get svc
+  337  kubectl delete -f service.yaml
+  338  vi service.yaml
+  339  kubectl create -f service.yaml
+  340  kubectl get svc
+  341  kubectl run test1 --image nignx --port 80
+  342  kubectl run test2 --image nignx --port 80
+  343  kubectl run test3 --image nignx --port 80
+  344  vi pod.yaml
+  345  kubectl expose po test1 --port 80 --type NodePort
+  346  kubectl expose po test2 --port 80 --type NodePort
+  347  kubectl expose po test3 --port 80 --type NodePort
+  348  kubectl get pods
+  349  kubectl get pod
+  350  kubectl get po
+  351  vi service.yaml
+  352  kubectl get svc
+  353  kubectl get svc --all-namespaces -o jsonpath='{.items[?(@.spec.ports[0].nodePort==30123)].metadata.name}'
+  354  kubectl get pods
+  355  kubectl edit pod test1
+  356  kubectl get pods
+  357  kubectl get svc
+  358  kubectl describe svc test1
+  359  kubectl get pods -o wide
+  360  history
+  361  cp pod.yaml wordpress.yaml
+  362  vi wordpress.yaml
+  363  kubectl create -f wordpress.yaml
+  364  kubectl get pods
+  365  kubectl delete pod test1 test2
+  366  kubectl delete pod test3 mypod
+  367  kubectl get pods
+  368  kubectl describe po wordpress
+  369  kubectl get pods
+  370  kubectl describe po wordpress
+  371  kubectl get pods
+  372  kubectl describe po wordpress
+  373  kubectl get pods
+  374  kubectl describe po wordpress
+  375  kubectl get pods
+  376  kubectl describe po wordpress
+  377  kubectl get pods
+  378  cp service.yaml wordpress-svc.yaml
+  379  vi wordpress.yaml
+  380  vi wordpress-svc.yaml
+  381  vi wordpress.ya
+  382  kubectl create -f wordpress-svc.yaml
+  383  kubectl get svc
+  384  vi wordpress.yaml
+  385  kubectl get pod -o wide
+  386  kubectl get svc
+  387  vi wordpress.yaml
+  388  cp wordpress.yaml  wp-app.yaml
+  389  vi wp-app.yaml
+  390  kubectl delete -f wordpress.yaml
+  391  kubectl delete svc test1 test2 test3 mypod-svc
+  392  kubectl get svc
+  393  kubectl get pods
+  394  vi wp-app.yaml
+  395  cp wp-app.yaml mysql.yaml
+  396  vi mysql.yaml
+  397  kubectl create -f wp-app.yaml -f mysql.yaml
+  398  kubectl get pods
+  399  kubectl get pods -o wide
+  400  kubectl get pods
+  401  kubectl describe pod mysql
+  402  kubectl get pods
+  403  kubectl describe pod mysql
+  404  kubectl
+  405  kubectl get pods
+  406  kubectl get svc
+  407  kubectl delete -f wp-app.yaml
+  408  vi wp-app.yaml
+  409  kubectl create -f wp-app.yaml
+  410  kubectl get pods
+  411  kubectl describe pod wordpress
+  412  vi wp-app.yaml
+
